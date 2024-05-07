@@ -82,8 +82,7 @@ class JPACocheDaoTest {
 		undertest.deleteAll();
 		undertest.saveAll(array);
 		
-		assertTrue(undertest.getConcesionario().size() == array.length, "Error al almacenar varios coches a la vez");
-				
+		assertEquals(array.length, undertest.getConcesionario().size(), "Error al almacenar varios coches a la vez");
 	}
 
 	@DisplayName("Verifica el método para actualizar el listado de coches")
